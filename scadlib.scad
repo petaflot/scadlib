@@ -1,6 +1,6 @@
 /*
 
-caSCADe - my OpenSCAD library to stop wasting so much time on stupid things
+scadlib - my OpenSCAD library to stop wasting so much time on stupid things
 like forgetting not to write cylinder([L,W,H]) and positionning amongst other
 things.
 
@@ -22,6 +22,15 @@ v:	0.1c
 BUGS: 
 	- prism(5,[...]) has double the sides! watch for odd numbers :-/
 */
+ttt = [true,true,true];
+ttf = [true,true,false];
+tft = [true,false,true];
+tff = [true,false,false];
+ftt = [false,true,true];
+ftf = [false,true,false];
+fft = [false,false,true];
+fff = [false,false,false];
+
 
 
 /*
@@ -119,6 +128,9 @@ module prism(fn, base=[1,1,1], center=[true,true,false], oblong=true, zrot=0, sh
 {
 	oblong_xoffset = base[0]>base[1]?((base[0]/2-(1+sqrt(2))*shell)+(base[0]/2-2*shell))/2:0;
 	oblong_yoffset = base[0]>base[1]?0:((base[1]/2-(1+sqrt(2))*shell)+(base[1]/2-2*shell))/2;
+
+	// TODO allow negative numbers in dimensions... usefeul when one of center values is false ; something like
+	// if ( base[0] < 0 ) {	mirror([1,0,0])	}
 
 	//if ( fn == 0 )
 	//{
