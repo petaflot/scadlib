@@ -1,6 +1,6 @@
 # scadlib
 
-A pretty straightforward library that makes OpenSCAD s little less of a pain to use
+A pretty straightforward library that makes OpenSCAD s little less of a pain to use and includes a few goodies
 
 Dependencies on other libs:
 
